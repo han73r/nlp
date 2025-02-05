@@ -21,6 +21,3 @@ def check_answer(data: AnswerCheckRequest):
     similarity = util.pytorch_cos_sim(user_embedding, correct_embedding).item()
     
     return {"similarity": round(similarity, 4)}
-
-
-# 
