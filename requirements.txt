@@ -1,4 +1,6 @@
-fastapi
-sentence-transformers
-torch
-uvicorn
+-f https://download.pytorch.org/whl/torch_stable.html
+
+fastapi==0.115.12
+sentence-transformers==4.0.2
+torch==2.6.0+cpu
+uvicorn==0.34.0
