@@ -1,10 +1,20 @@
 # Используем официальный Python 3.10 образ
 FROM python:3.10-slim
+# FROM python:3.10-alpine - с ним не собирается
+
+# Обновляем pip
+RUN pip install --upgrade pip
 
 # Системные зависимости (для компиляции numpy, torch и т.д.)
+# RUN apt-get update && apt-get install -y \
+#     build-essential \
+#     git \
+#     && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y \
     build-essential \
     git \
+    libomp-dev \
+    libopenblas-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Устанавливаем рабочую директорию

@@ -6,7 +6,8 @@ from sentence_transformers import SentenceTransformer, util
 app = FastAPI(title="Answer Similarity API", version="1.0")
 
 # Load model
-model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+#model = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+model = SentenceTransformer('distiluse-base-multilingual-cased-v2')
 
 # Question Requst
 class AnswerCheckRequest(BaseModel):
