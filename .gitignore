@@ -28,7 +28,6 @@ Thumbs.db
 # Docker файлы
 .dockerignore
 Dockerfile.*
-Dockerfile
 docker-compose.override.yml
 *.pid
 *.sock
